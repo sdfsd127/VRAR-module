@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: -1998723387779947358}
   m_Layer: 0
   m_Name: Single Bed
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -68,8 +68,11 @@ public class Furniture : MonoBehaviour
     //
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(spawnOrigin, new Vector3(spawnRange.x, 5, spawnRange.y));
+        if (GameManager.Instance != null && GameManager.IsDebugMode())
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(spawnOrigin, new Vector3(spawnRange.x, 5, spawnRange.y));
+        }
     }
 }
 

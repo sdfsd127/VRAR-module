@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -9090280879103253151}
   m_Layer: 0
   m_Name: Deep Plate
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

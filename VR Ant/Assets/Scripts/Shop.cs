@@ -10,7 +10,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject shopItemPanelPrefab;
     private List<GameObject> shopItemList;
 
-    [SerializeField] private KeyCode SHOPHOTKEY;
+    [SerializeField] private KeyCode SHOP_HOTKEY;
 
     [SerializeField] private bool RESET_SHOP_ON_CLOSE;
 
@@ -23,7 +23,7 @@ public class Shop : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(SHOPHOTKEY))
+        if (Input.GetKeyUp(SHOP_HOTKEY))
         {
             mainPanel.SetActive(!mainPanel.activeSelf);
             if (RESET_SHOP_ON_CLOSE)

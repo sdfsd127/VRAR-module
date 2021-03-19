@@ -22,7 +22,6 @@ public class ItemPanel : MonoBehaviour
 
     private void OnClickEvent()
     {
-        if (Ant.Instance.HasEnoughMoney(m_Price))
-            Furniture.Instance.SpawnFurniture(m_Name);
+        Ant.Instance.PurchaseItem(m_Name, m_Price);
     }
 }

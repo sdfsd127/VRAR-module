@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 592924067278792115}
   m_Layer: 0
   m_Name: Washing Machine
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

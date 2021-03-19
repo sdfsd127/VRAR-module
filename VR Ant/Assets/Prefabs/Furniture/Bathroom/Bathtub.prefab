@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 6506270472369140432}
   m_Layer: 0
   m_Name: Bathtub
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 70fc3b7d3b7cf7b41b3932fc7fca49a9, type: 3}
       propertyPath: m_Name
       value: Bathroom_Bathtub
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 70fc3b7d3b7cf7b41b3932fc7fca49a9, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70fc3b7d3b7cf7b41b3932fc7fca49a9, type: 3}
