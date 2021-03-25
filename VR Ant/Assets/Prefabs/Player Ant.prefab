@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8522374372918545261}
   - component: {fileID: 1903625460387209300}
-  - component: {fileID: 4618504994507464451}
   - component: {fileID: 3063999210965967171}
+  - component: {fileID: 352689191731159943}
   m_Layer: 0
   m_Name: Player Ant
   m_TagString: Untagged
@@ -46,22 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161e4ce5badab464d87a7981655a2efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MOVEMENT_KEYS: 77000000610000007300000064000000
-  moveSpeed: 4332
+  lookSensitivity: 0
+  xLookBounds: {x: 0, y: 0}
+  invertCameraXRot: 0
+  playerMoveSpeed: 0
+  playerMaxMoveSpeed: 0
   playerStartCurrency: 0
---- !u!65 &4618504994507464451
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3096572315281434955}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.86713785, y: 0.5397754, z: 0.86648214}
-  m_Center: {x: 0.008058339, y: 0.2857678, z: 0.01615423}
 --- !u!54 &3063999210965967171
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +68,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
+--- !u!136 &352689191731159943
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096572315281434955}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 0.6
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2104408993685839756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26a08844c815fbb42b01cf1e7cfb2a2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.226
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26a08844c815fbb42b01cf1e7cfb2a2e, type: 3}
       propertyPath: m_LocalPosition.z

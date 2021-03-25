@@ -6,10 +6,16 @@ public class Ant : MonoBehaviour
 {
     public static Ant Instance;
 
+    // Looking
+    [SerializeField] private Camera antCam;
+    [SerializeField] private float lookSensitivity;
+    [SerializeField] private float minXLook, maxXLook;
+    [SerializeField] private bool invertCameraXRot;
+    private float curXRot;
+
     // Movement
     private Rigidbody rb;
     [SerializeField] private float playerMoveSpeed;
-    [SerializeField] private float playerMaxMoveSpeed;
 
     // Money
     [SerializeField] private float playerStartCurrency;
@@ -18,6 +24,7 @@ public class Ant : MonoBehaviour
     // Grabbing and Moving
     private bool mandiblesClosed;
     private GameObject grabbedObject;
+    private float grabbedObjectMass;
 
     //
     // INITIALISATION
@@ -35,6 +42,8 @@ public class Ant : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         playerCurrentCurrency = playerStartCurrency;
+
+        CursorControl.SetCursorState(CursorLockMode.Confined, false);
     }
 
     //
@@ -49,6 +58,8 @@ public class Ant : MonoBehaviour
 
             if (mandiblesClosed) // Now closing mandibles
             {
+                Debug.Log("Closing Mandibles");
+
                 // Search a box in front of the Ant for objects to grab
                 Collider[] colliders = Physics.OverlapBox(transform.position + transform.forward, new Vector3(0.5f, 0.5f, 0.5f));
 
@@ -81,33 +92,50 @@ public class Ant : MonoBehaviour
             }
             else // Now openning mandibles
             {
+                Debug.Log("Openning Mandibles");
 
+                DropObject();
             }
         }
     }
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
-            rb.velocity += (transform.forward * playerMoveSpeed);
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.A))
-            rb.velocity -= (transform.right * playerMoveSpeed);
+        Vector3 dir = transform.right * x + transform.forward * z;
+        dir.y = rb.velocity.y;
 
-        if (Input.GetKey(KeyCode.S))
-            rb.velocity -= (transform.forward * playerMoveSpeed);
+        rb.velocity = dir * playerMoveSpeed;
+    }
 
-        if (Input.GetKey(KeyCode.D))
-            rb.velocity += (transform.right * playerMoveSpeed);
+    private void LateUpdate()
+    {
+        float x = Input.GetAxis("Mouse X");
+        float y = Input.GetAxis("Mouse Y");
 
-        rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -playerMaxMoveSpeed, playerMaxMoveSpeed), 0, Mathf.Clamp(rb.velocity.z, -playerMaxMoveSpeed, playerMaxMoveSpeed));
+        transform.eulerAngles += Vector3.up * x * lookSensitivity;
+
+        if (invertCameraXRot)
+            curXRot += y * lookSensitivity;
+        else
+            curXRot -= y * lookSensitivity;
+
+        curXRot = Mathf.Clamp(curXRot, minXLook, maxXLook);
+
+        Vector3 clampedAngle = antCam.transform.eulerAngles;
+        clampedAngle.x = curXRot;
+        antCam.transform.eulerAngles = clampedAngle;
     }
 
     private void PickupObject(GameObject gameObject)
     {
         grabbedObject = gameObject;
-        grabbedObject.GetComponent<Rigidbody>().useGravity = false;
-        grabbedObject.transform.parent = transform;
+        SetPickupObjectState(false);
+        grabbedObject.transform.parent.transform.parent = this.transform;
+
+        Destroy(grabbedObject.GetComponent<Rigidbody>());
     }
 
     private void DropObject()
@@ -115,8 +143,21 @@ public class Ant : MonoBehaviour
         if (grabbedObject == null)
             return;
 
-        grabbedObject.GetComponent<Rigidbody>().useGravity = true;
-        grabbedObject.transform.parent = null;
+        grabbedObject.AddComponent<Rigidbody>().mass = grabbedObjectMass;
+
+        SetPickupObjectState(true);
+        grabbedObject.transform.parent.transform.parent = null;
+        grabbedObject = null;
+    }
+
+    //
+    // TOOLS
+    //
+    private void SetPickupObjectState(bool state)
+    {
+        Rigidbody grabbedObjectRB = grabbedObject.GetComponent<Rigidbody>();
+        grabbedObjectRB.useGravity = state;
+        grabbedObjectRB.detectCollisions = state;
     }
 
     private void ChangePlayerCurrency(float amount) 
