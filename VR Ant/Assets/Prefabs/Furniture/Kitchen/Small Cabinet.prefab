@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &2772869527248580297
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666142650457776625}
+  serializedVersion: 2
+  m_Mass: 80
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &990951840215518873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22,7 +38,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6930954040062108789}
-  - component: {fileID: -5591248590385669642}
   m_Layer: 0
   m_Name: Small Cabinet
   m_TagString: Interactable
@@ -45,22 +60,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-5591248590385669642
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6930954040062108794}
-  serializedVersion: 2
-  m_Mass: 80
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &4477044776259869856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ae0029aba51db64684a280d4a8e7627, type: 3}
       propertyPath: m_Name
       value: Kitchen_CabinetSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ae0029aba51db64684a280d4a8e7627, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ae0029aba51db64684a280d4a8e7627, type: 3}

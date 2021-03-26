@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public bool SHOW_DEBUGGING;
 
+    private Shop shop;
+
     private void Awake()
     {
         if (Instance == null)
@@ -16,11 +18,21 @@ public class GameManager : MonoBehaviour
             Destroy(this);
     }
 
+    private void Start()
+    {
+        shop = GameObject.Find("Shop Panel").GetComponent<Shop>();
+    }
+
     public static bool IsDebugMode()
     {
         if (Instance.SHOW_DEBUGGING)
             return true;
         else
             return false;
+    }
+
+    public bool IsShopOpen()
+    {
+        return shop.IsShopOpen();
     }
 }

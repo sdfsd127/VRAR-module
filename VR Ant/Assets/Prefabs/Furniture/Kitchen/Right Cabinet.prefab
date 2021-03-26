@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115989172287279662}
-  - component: {fileID: 3215564862210634148}
   m_Layer: 0
   m_Name: Right Cabinet
   m_TagString: Interactable
@@ -32,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3215564862210634148
+--- !u!54 &2090571803723149942
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115989172287279649}
+  m_GameObject: {fileID: 7379687098544928804}
   serializedVersion: 2
   m_Mass: 140
   m_Drag: 0
@@ -115,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0f0857c75f39a90429e7ddd1689c1730, type: 3}
       propertyPath: m_Name
       value: Kitchen_Cabinet2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f0857c75f39a90429e7ddd1689c1730, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f0857c75f39a90429e7ddd1689c1730, type: 3}

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289918667236996352}
-  - component: {fileID: 2639616282719089131}
   m_Layer: 0
   m_Name: Bookshelf
   m_TagString: Interactable
@@ -32,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2639616282719089131
+--- !u!54 &8674680379325513547
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122420033177687855}
+  m_GameObject: {fileID: 7446393962309785785}
   serializedVersion: 2
   m_Mass: 70
   m_Drag: 0
@@ -115,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 184aba781b98b4545af2889a6b3b6e35, type: 3}
       propertyPath: m_Name
       value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 184aba781b98b4545af2889a6b3b6e35, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 184aba781b98b4545af2889a6b3b6e35, type: 3}

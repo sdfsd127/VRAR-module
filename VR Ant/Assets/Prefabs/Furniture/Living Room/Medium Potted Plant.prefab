@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273481101153472411}
-  - component: {fileID: -3688360318742014912}
   m_Layer: 0
   m_Name: Medium Potted Plant
   m_TagString: Interactable
@@ -32,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-3688360318742014912
+--- !u!54 &8871217902053107726
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068056018564753649}
+  m_GameObject: {fileID: 8692099212964523604}
   serializedVersion: 2
   m_Mass: 5
   m_Drag: 0
@@ -115,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c0fab1b1029ae3c449d0eeab5379b8a9, type: 3}
       propertyPath: m_Name
       value: Houseplant_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0fab1b1029ae3c449d0eeab5379b8a9, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0fab1b1029ae3c449d0eeab5379b8a9, type: 3}

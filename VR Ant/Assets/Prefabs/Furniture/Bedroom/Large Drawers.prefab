@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4260980043752597854}
-  - component: {fileID: 6633925896352333571}
   m_Layer: 0
   m_Name: Large Drawers
   m_TagString: Interactable
@@ -32,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6633925896352333571
+--- !u!54 &6068922212620758575
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545031724063281441}
+  m_GameObject: {fileID: 4554374866743480328}
   serializedVersion: 2
   m_Mass: 120
   m_Drag: 0
@@ -115,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5583acd18c0118b4690c3a145ef7618b, type: 3}
       propertyPath: m_Name
       value: Drawer_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5583acd18c0118b4690c3a145ef7618b, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5583acd18c0118b4690c3a145ef7618b, type: 3}

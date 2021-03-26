@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7074872672428904007}
-  - component: {fileID: -5059504792447194256}
   m_Layer: 0
   m_Name: Small Couch
   m_TagString: Interactable
@@ -32,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-5059504792447194256
+--- !u!54 &6491904454007019604
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4504465613715375362}
+  m_GameObject: {fileID: 7832943956700402989}
   serializedVersion: 2
   m_Mass: 115
   m_Drag: 0
@@ -115,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3c9a3c670080a674884d1efc49a9e825, type: 3}
       propertyPath: m_Name
       value: Couch_Small1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c9a3c670080a674884d1efc49a9e825, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c9a3c670080a674884d1efc49a9e825, type: 3}

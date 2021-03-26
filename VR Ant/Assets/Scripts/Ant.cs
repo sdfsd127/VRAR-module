@@ -101,6 +101,7 @@ public class Ant : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // DIR Movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -112,6 +113,10 @@ public class Ant : MonoBehaviour
 
     private void LateUpdate()
     {
+        // Don't move camera or player with mouse if they are shopping
+        if (GameManager.Instance.IsShopOpen())
+            return;
+
         float x = Input.GetAxis("Mouse X");
         float y = Input.GetAxis("Mouse Y");
 
@@ -186,6 +191,7 @@ public class Ant : MonoBehaviour
     {
         if (GameManager.Instance != null && GameManager.IsDebugMode())
         {
+            // Pickup Area
             Gizmos.color = Color.white;
             Gizmos.DrawCube(transform.position + transform.forward, Vector3.one);
         }

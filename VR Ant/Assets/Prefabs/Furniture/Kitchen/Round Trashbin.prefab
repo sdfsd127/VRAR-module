@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185156329348699182}
-  - component: {fileID: 7603853360450640106}
   m_Layer: 0
   m_Name: Round Trashbin
   m_TagString: Interactable
@@ -32,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &7603853360450640106
+--- !u!54 &6989417858105749462
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185156329348699169}
+  m_GameObject: {fileID: 1031508358233553016}
   serializedVersion: 2
   m_Mass: 15
   m_Drag: 0
@@ -48,6 +47,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2708566640711490143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031508358233553016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00364776, y: 0.003284538, z: 0.0056027807}
+  m_Center: {x: 0, y: 0, z: 0.0021013357}
 --- !u!1001 &185156328419116329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,8 +115,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trashcan_Small2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7709432fa711a2346b6c7c10d04de7a5, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7709432fa711a2346b6c7c10d04de7a5, type: 3}
+--- !u!1 &1031508358233553016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7709432fa711a2346b6c7c10d04de7a5, type: 3}
+  m_PrefabInstance: {fileID: 185156328419116329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &368019522850595522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7709432fa711a2346b6c7c10d04de7a5, type: 3}

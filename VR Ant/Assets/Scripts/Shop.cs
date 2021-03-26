@@ -28,6 +28,11 @@ public class Shop : MonoBehaviour
             mainPanel.SetActive(!mainPanel.activeSelf);
             if (RESET_SHOP_ON_CLOSE)
                 ResetAllPanels();
+
+            if (mainPanel.activeSelf)
+                CursorControl.SetCursorState(CursorLockMode.None, true);
+            else
+                CursorControl.SetCursorState(CursorLockMode.Confined, false);
         }
     }
 
@@ -79,6 +84,14 @@ public class Shop : MonoBehaviour
             default:
                 return -1;
         }
+    }
+
+    //
+    // External Calls
+    //
+    public bool IsShopOpen()
+    {
+        return mainPanel.activeSelf;
     }
 
     //
